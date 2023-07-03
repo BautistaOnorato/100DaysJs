@@ -1,0 +1,140 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+h1 {
+  margin: 0 10px 50px;
+  text-align: center;
+  font-size: 3.2rem;
+}
+
+.container {
+  background-color: #ffffff;
+  color: #242424;
+  padding: 4rem;
+  border-radius: 16px;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.range-inputs-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.range-input {
+  padding: 0 10px;
+}
+
+.range-inputs-container .range-input label {
+  display: block;
+}
+
+.range-input input {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.form-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.btn-form {
+  border: none;
+  background-color: #242424;
+  color: #ffffff;
+  padding: 0 10px;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 70px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 8px;
+  outline: 2px solid #242424;
+}
+
+.grid-container {
+  margin-top: 20px;
+  display: grid;
+  border: 1px solid rgb(162, 162, 162);
+  width: fit-content;
+  
+}
+
+.grid-block {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(162, 162, 162);
+  cursor: crosshair;
+}
+
+@media screen and (max-width: 800px) {
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    width: 95vw;
+    padding: 1.5rem;
+  }
+
+  .range-inputs-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 528px) {
+  .container {
+    padding: 1rem;
+    width: 90vw;
+  }
+
+  .range-inputs-container {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .form-buttons {
+    justify-content: flex-start;
+  }
+}
