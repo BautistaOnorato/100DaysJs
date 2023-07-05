@@ -1,0 +1,214 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  background-color: #f1f1f1;
+  color: #242424;
+  border-radius: 16px;
+  width: 400px;
+}
+
+.title {
+  width: 100%;
+  border-bottom: 1px solid #b1b1b1c2;
+  padding: 10px 15px;
+}
+
+.title h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  gap: 30px;
+}
+
+fieldset {
+  border: none;
+  width: 90%;
+}
+
+
+.output-container .output-password {
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #b1b1b1c2;
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  position: relative;
+}
+
+.output-container .output-password:focus {
+  border: 1px solid #b1b1b1c2;
+  outline: none;
+}
+
+.output-password p {
+  width: 70%;
+  padding: 0 10px 0;
+}
+
+.output-password .copy {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.output-password .copy-modal {
+  position: absolute;
+  background-color: #242424bb;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 0px 0px 4px 4px;
+  right: 1%;
+  bottom: 0;
+  z-index: 1;
+}
+
+.copy-modal.triggered {
+  animation: copied-animation 4s ease forwards;
+}
+
+.copy-icon {
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 100;
+  padding-right: 10px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.output-container svg {
+  width: 20px;
+  cursor: pointer;
+  transition: all ease 0.1s;
+}
+
+.output-container svg:hover {
+  scale: 1.1;
+  color: #4176FF;
+}
+
+.strength-line {
+  height: 3px;
+  margin: 10px 2px 0;
+  border-radius: 16px;
+}
+
+.strength-line#weak {
+  background-color: rgb(255, 54, 54);
+  width: 15%;
+}
+
+.strength-line#medium {
+  background-color: rgb(255, 203, 15);
+  width: 50%;
+}
+
+.strength-line#strong {
+  background-color: rgb(38, 201, 40);
+  width: 100%;
+}
+
+.length-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.length-container label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.length-container input {
+  height: 5px
+}
+
+.settings-container p {
+  margin-bottom: 20px;
+}
+
+.settings {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.setting {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.setting input {
+  cursor: pointer;
+}
+
+.btn-generate {
+  width: 90%;
+  height: 50px;
+  background-color: #4176FF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.btn-generate:focus {
+  border: none;
+  outline: none;
+}
+
+@keyframes copied-animation {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(110%);
+  }
+  80% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0);  
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .container {
+    width: 90vw;
+  }
+
+  .settings {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
