@@ -1,0 +1,106 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.board {
+  display: grid;
+  width: 400px;
+  height: 400px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.board .square {
+  border: 1px solid white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  gap: 20px;
+}
+
+.turns {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.turns .square {
+  font-size: 2rem;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.turns .square.is-selected {
+  background-color: rgb(109, 76, 255);
+}
+
+.modal-container {
+  position: absolute;
+  bottom: 33%;
+}
+
+.modal {
+  position: relative;
+  background-color: #242424;
+  width: 350px;
+  height: 300px;
+  border-radius: 4px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal button {
+  padding: 10px 30px;
+  background-color: rgb(109, 76, 255);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal .square {
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 444px) {
+  .board {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .board .square {
+    font-size: 2.5rem;
+  }
+
+  .actions {
+    width: 90vw;
+  }
+
+  .modal {
+    width: 70vw;
+  }
+}
