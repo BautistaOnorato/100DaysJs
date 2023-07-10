@@ -1,0 +1,191 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  background-color: #fff;
+  height: 60%;
+  width: 400px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.form-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+  position: relative;
+  border-bottom: 1px solid #a3a3a3;
+  background-color: #0E6AD1;
+}
+
+.form-header .step {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: #0E6AD1;
+  color: #fff;
+  font-weight: 500;
+}
+
+.form-header .progress-bar {
+  position: absolute;
+  height: 100%;
+  background-color: #fff;
+  right: -1%;
+  top: -1%;
+  clip-path: polygon(0 0, 8% 50%, 0 100%, 100% 100%, 100% 0);
+}
+
+.form-container form {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.form-container form fieldset {
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #a3a3a3;
+}
+
+.form-container form .page .input-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.input-container input {
+  border: none;
+  border-bottom: 1px solid #a3a3a3;
+  height: 30px;
+  font-weight: 700;
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+.error {
+  color: #ff2a2a;
+  font-weight: 700;
+}
+
+.btns-container {
+  width: 100%;
+  padding: 0 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btns-container button {
+  border: none;
+  border-radius: 16px;
+  height: 30px;
+  width: 100px;
+  background-color: #0E6AD1;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.user-container {
+  width: 100%;
+  height: 100%;
+}
+
+.user-container .top-user {
+  width: 100%;
+  background-color: #0E6AD1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.user-container .name-avatar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.user-container .name-avatar .avatar {
+  height: 50px;
+  width: 50px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+.top-user .logout {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+.top-user .logout:hover {
+  background-color: #0a42827e;
+}
+
+.top-user .logout svg {
+  width: 32px;
+  color: #fff;
+}
+
+.contact {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact ul {
+  width: 100%;
+  padding: 0 25px 25px;
+  list-style: none;
+}
+
+.contact ul li {
+  padding: 15px;
+}
+
+.contact h2 {
+  color: #a3a3a3;
+}
